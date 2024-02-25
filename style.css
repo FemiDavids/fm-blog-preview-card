@@ -1,0 +1,154 @@
+/* general styling  */
+
+:root {
+  /* colors  */
+  --clr-primary: hsl(47, 88%, 63%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-grey: hsl(0, 0%, 50%);
+  --clr-neutral-black: hsl(0, 0%, 7%);
+
+  /* typography  */
+  --ff-base: "Figtree", sans-serif;
+
+  --fs-12: 1.2rem;
+  --fs-14: 1.4rem;
+  --fs-16: 1.6rem;
+  --fs-18: 1.8rem;
+  --fs-20: 2rem;
+
+  --fw-medium: 500;
+  --fw-extrabold: 800;
+}
+
+/* css reset from josh comeau */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-medium);
+  line-height: 1.5;
+  color: var(--clr-neutral-black);
+
+  background-color: var(--clr-primary);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+@media (max-width: 560px) {
+  body {
+    margin: 1.6rem;
+  }
+}
+
+/* blog card styling */
+.blog-card {
+  padding: 2rem;
+  background-color: var(--clr-neutral-white);
+  border-radius: 1.6rem;
+  border: 1px solid var(--clr-neutral-black);
+  display: grid;
+  row-gap: 2rem;
+
+  max-width: 34rem;
+
+  box-shadow: 7px 7px 0 0 var(--clr-neutral-black);
+}
+
+.blog-card__img {
+  border-radius: 1.2rem;
+}
+
+.blog-card__content {
+  display: grid;
+  row-gap: 1.4rem;
+}
+
+.blog-card__category {
+  padding: 0.3rem 1.2rem;
+  background-color: var(--clr-primary);
+  border-radius: 0.4rem;
+  font-weight: var(--fw-extrabold);
+  width: fit-content;
+  color: var(--clr-neutral-black);
+}
+
+.blog-card__date {
+  font-size: var(--fs-12);
+}
+
+.blog-card__title:link,
+.blog-card__title:visited {
+  text-decoration: none;
+  color: var(--clr-neutral-black);
+  cursor: pointer;
+
+  font-size: var(--fs-20);
+  font-weight: var(--fw-extrabold);
+}
+
+.blog-card__title:hover,
+.blog-card__title:active {
+  color: var(--clr-primary);
+}
+
+.blog-card__description {
+  color: var(--clr-neutral-grey);
+}
+
+.blog-card__author {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.blog-card__author img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.blog-card__author .name {
+  font-weight: var(--fw-extrabold);
+}
